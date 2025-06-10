@@ -25,12 +25,17 @@ modules:
       - https://copr.fedorainfracloud.org/coprs/medzik/vscode/repo/fedora-%OS_VERSION%/swayfx-swayfx-fedora-%OS_VERSION%.repo
       # Only add repos for packages you actually need that aren't in Bazzite
     install:
+      - aquamarine
+      - ark
+      - breeze-gtk
       - brightnessctl
       - cliphist
       - code-oss
+      - dolphin
       - dwarfs
       - fish
       - fontconfig
+      - gwenview
       - hellwal
       - hyprcursor
       - hyprdim
@@ -50,12 +55,21 @@ modules:
       - hyprshot
       - hyprsysteminfo
       - hyprutils
+      - kate
+      - kcalc
+      - kde-gtk-config
+      - kde-settings
+      - kde-style-breeze
       - kitty
+      - konsole
+      - kscreen
+      - kwrite
       - libva
       - libvdpau
       - libxcb
       - lxappearance
       - micro
+      - nautilus
       - niri
       - nodejs
       - nwg-bar
@@ -70,8 +84,18 @@ modules:
       - nwg-shell
       - nwg-shell-config
       - nwg-shell-wallpapers
-      - ocl-icd
+      - plasma-breeze
+      - plasma-desktop
+      - plasma-nm
+      - plasma-pa
+      - plasma-systemsettings
+      - plasma-workspace
       - pyprland
+      - qt5-qtvirtualkeyboard
+      - qt5-qtvirtualkeyboard-examples
+      - qt6-qtdeclarative
+      - qt6-qtsvg
+      - ranger
       - rofi-wayland
       - satty
       - sddm
