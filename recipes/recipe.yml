@@ -22,7 +22,7 @@ modules:
       - https://copr.fedorainfracloud.org/coprs/tofik/nwg-shell/repo/fedora-%OS_VERSION%/tofik-nwg-shell-fedora-%OS_VERSION%.repo
       - https://copr.fedorainfracloud.org/coprs/wef/wlogout/repo/fedora-%OS_VERSION%/wef-wlogout-fedora-%OS_VERSION%.repo
       - https://copr.fedorainfracloud.org/coprs/yalter/niri-git/repo/fedora-%OS_VERSION%/yalter-niri-git-fedora-%OS_VERSION%.repo
-      - https://copr.fedorainfracloud.org/coprs/medzik/vscode/repo/fedora-%OS_VERSION%/swayfx-swayfx-fedora-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/medzik/vscode/repo/fedora-%OS_VERSION%/medzik-vscode-fedora-%OS_VERSION%.repo
       # Only add repos for packages you actually need that aren't in Bazzite
     install:
       - aquamarine
