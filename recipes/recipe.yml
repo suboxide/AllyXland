@@ -67,7 +67,6 @@ modules:
       - libva
       - libvdpau
       - libxcb
-      - lxappearance
       - micro
       - nautilus
       - niri
@@ -89,7 +88,6 @@ modules:
       - plasma-nm
       - plasma-pa
       - plasma-systemsettings
-      - plasma-workspace
       - pyprland
       - qt5-qtvirtualkeyboard
       - qt5-qtvirtualkeyboard-examples
