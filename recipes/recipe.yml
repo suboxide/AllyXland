@@ -1,24 +1,20 @@
 ---
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
-# image will be published to ghcr.io/<user>/<name>
-name: AllyXland
-# description will be included in the image's metadata
+name: allyxland  # Fixed: lowercase as per warning
 description: Bazzite gnome deck with SDDM switching.
 
-# the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/bazzite-deck-gnome
-image-version: 42 # latest is also supported if you want new updates ASAP
+image-version: 42
 
-# module configuration, executed in order
-# you can include multiple instances of the same module
 modules:
   - type: files
     files:
       - source: system
-        destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
+        destination: /
 
   - type: rpm-ostree
     repos:
+      - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
       - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
       - https://copr.fedorainfracloud.org/coprs/jc141/DwarFS/repo/fedora-%OS_VERSION%/jc141-DwarFS-fedora-%OS_VERSION%.repo
       - https://copr.fedorainfracloud.org/coprs/mochaa/swaync/repo/fedora-%OS_VERSION%/mochaa-swaync-fedora-%OS_VERSION%.repo
@@ -27,143 +23,18 @@ modules:
       - https://copr.fedorainfracloud.org/coprs/wef/wlogout/repo/fedora-%OS_VERSION%/wef-wlogout-fedora-%OS_VERSION%.repo
       - https://copr.fedorainfracloud.org/coprs/yalter/niri-git/repo/fedora-%OS_VERSION%/yalter-niri-git-fedora-%OS_VERSION%.repo
       - https://copr.fedorainfracloud.org/coprs/medzik/vscode/repo/fedora-%OS_VERSION%/swayfx-swayfx-fedora-%OS_VERSION%.repo
-      - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
+      # Only add repos for packages you actually need that aren't in Bazzite
     install:
-      - micro
-      - starship
-      - alsa-lib
-      - alsa-plugins-pulseaudio
-      - aquamarine
-      - ark
-      - bluez
-      - breeze-gtk
-      - brightnessctl
-      - cliphist
-      - code-oss
-      - dolphin
-      - dwarfs
-      - fcitx5
-      - fcitx5-autostart
-      - fcitx5-data
-      - fcitx5-devel
-      - fcitx5-libs
-      - fish
-      - fontconfig
-      - gnome-control-center
-      - gnome-screenshot
-      - gnome-settings-daemon
-      - gnome-shell
-      - gnome-software
-      - gnome-system-monitor
-      - gnome-terminal
-      - gwenview
-      - hellwal
-      - hyprcursor
-      - hyprdim
-      - hyprgraphics
-      - hypridle
-      - hyprland
-      - hyprland-contrib
-      - hyprland-plugins
-      - hyprland-qt-support
-      - hyprland-qtutils
-      - hyprlang
-      - hyprlock
-      - hyprnome
-      - hyprpaper
-      - hyprpicker
-      - hyprpolkitagent
-      - hyprshot
-      - hyprsysteminfo
-      - hyprutils
-      - kate
-      - kcalc
-      - kde-gtk-config
-      - kde-settings
-      - kde-style-breeze
-      - kitty
-      - konsole
-      - kscreen
-      - kwrite
-      - libva
-      - libvdpau
-      - libxcb
-      - lxappearance
-      - matugen
-      - micro
-      - miracle-wm
-      - mpvpaper
-      - nautilus
-      - niri
-      - nodejs
-      - nwg-bar
-      - nwg-clipman
-      - nwg-displays
-      - nwg-dock
-      - nwg-drawer
-      - nwg-icon-picker
-      - nwg-look
-      - nwg-menu
-      - nwg-panel
-      - nwg-shell
-      - nwg-shell-config
-      - nwg-shell-wallpapers
-      - ocl-icd
-      - okular
-      - openssh
-      - openssh-server
-      - plasma-breeze
-      - plasma-desktop
-      - plasma-nm
-      - plasma-pa
-      - plasma-systemsettings
-      - plasma-workspace
-      - pyprland
-      - qt5-qtvirtualkeyboard
-      - qt5-qtvirtualkeyboard-examples
-      - qt6-qtdeclarative
-      - qt6-qtsvg
-      - ranger
-      - rofi-wayland
-      - satty
+      # Only install what's NOT already in Bazzite
       - sddm
       - sddm-breeze
       - sddm-kcm
-      - sddm-themes
-      - starship
-      - swappy
-      - swaylock-effects
-      - swww
       - tailscale
-      - Thunar
-      - thunar-archive-plugin
-      - thunar-media-tags-plugin
-      - thunar-vcs-plugin
-      - thunar-volman
-      - tomlplusplus
-      - traceroute
-      - unclutter-xfixes
-      - uwsm
-      - waybar-git
-      - waypaper
-      - wayvnc
-      - wl-clipboard
-      - wlogout
-      - xcb-util-image
-      - xcb-util-keysyms
-      - xcb-util-renderutil
-      - xcb-util-wm
-      - xcur2png
-      - xdg-desktop-portal-hyprland
-      - zsh
-      - https://repo.almalinux.org/almalinux/9/AppStream/x86_64/os/Packages/compat-openssl11-1.1.1k-4.el9_0.x86_64.rpm
-      - https://boosteroid.com/linux/installer/boosteroid-install-x64.rpm
-      - https://github.com/ONLYOFFICE/DesktopEditors/releases/latest/download/onlyoffice-desktopeditors.x86_64.rpm
+      # Add others one by one after testing
 
   - type: default-flatpaks
-    notify: true # Send notification after install/uninstall is finished (true/false)
+    notify: true
     system:
-      # If no repo information is specified, Flathub will be used by default
       install:
         - org.mozilla.firefox
         - org.gnome.Loupe
@@ -175,14 +46,12 @@ modules:
         - org.prismlauncher.PrismLauncher
       remove:
         - org.gnome.eog
-    user: {} # Also add Flathub user repo, but no user packages
+    user: {}
 
   - type: systemd
     system:
       enabled:
         - tailscaled
-      disabled:
-        []
     user: {}
 
   - type: fonts
