@@ -3,7 +3,7 @@
 name: allyxland  # Fixed: lowercase as per warning
 description: Bazzite gnome deck with SDDM switching.
 
-base-image: ghcr.io/ublue-os/bazzite-deck
+base-image: ghcr.io/ublue-os/bazzite-deck-gnome
 image-version: 42
 
 modules:
@@ -23,34 +23,12 @@ modules:
       - https://copr.fedorainfracloud.org/coprs/wef/wlogout/repo/fedora-%OS_VERSION%/wef-wlogout-fedora-%OS_VERSION%.repo
       - https://copr.fedorainfracloud.org/coprs/yalter/niri-git/repo/fedora-%OS_VERSION%/yalter-niri-git-fedora-%OS_VERSION%.repo
       - https://copr.fedorainfracloud.org/coprs/medzik/vscode/repo/fedora-%OS_VERSION%/medzik-vscode-fedora-%OS_VERSION%.repo
-      # Only add repos for packages you actually need that aren't in Bazzite
     install:
-      - alsa-lib
-      - alsa-plugins-pulseaudio
-      - aquamarine
-      - ark
-      - bluez
-      - breeze-gtk
       - brightnessctl
       - cliphist
       - code-oss
-      - dolphin
       - dwarfs
-      - fcitx5
-      - fcitx5-autostart
-      - fcitx5-data
-      - fcitx5-devel
-      - fcitx5-libs
       - fish
-      - fontconfig
-      - gnome-control-center
-      - gnome-screenshot
-      - gnome-settings-daemon
-      - gnome-shell
-      - gnome-software
-      - gnome-system-monitor
-      - gnome-terminal
-      - gwenview
       - hellwal
       - hyprcursor
       - hyprdim
@@ -70,24 +48,11 @@ modules:
       - hyprshot
       - hyprsysteminfo
       - hyprutils
-      - kate
-      - kcalc
-      - kde-gtk-config
-      - kde-settings
-      - kde-style-breeze
       - kitty
-      - konsole
-      - kscreen
-      - kwrite
       - libva
       - libvdpau
       - libxcb
-      - lxappearance
-      - matugen
       - micro
-      - miracle-wm
-      - mpvpaper
-      - nautilus
       - niri
       - nodejs
       - nwg-bar
@@ -102,28 +67,10 @@ modules:
       - nwg-shell
       - nwg-shell-config
       - nwg-shell-wallpapers
-      - ocl-icd
-      - okular
-      - openssh
-      - openssh-server
-      - plasma-breeze
-      - plasma-desktop
-      - plasma-nm
-      - plasma-pa
-      - plasma-systemsettings
-      - plasma-workspace
       - pyprland
-      - qt5-qtvirtualkeyboard
-      - qt5-qtvirtualkeyboard-examples
-      - qt6-qtdeclarative
-      - qt6-qtsvg
       - ranger
       - rofi-wayland
       - satty
-      - sddm
-      - sddm-breeze
-      - sddm-kcm
-      - sddm-themes
       - starship
       - swappy
       - swaylock-effects
