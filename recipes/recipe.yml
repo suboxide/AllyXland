@@ -156,18 +156,15 @@ modules:
       - xcur2png
       - xdg-desktop-portal-hyprland
       - zsh
+      - https://boosteroid.com/linux/installer/boosteroid-install-x64.rpm
     remove:
       # - firefox
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
     system:
+      # If no repo information is specified, Flathub will be used by default
       install:
-        - org.gnome.Loupe
-        - com.vscodium.codium
-        - org.onlyoffice.desktopeditors
-    user:
-      install: 
         - org.gnome.Loupe
         - com.vscodium.codium
         - org.onlyoffice.desktopeditors
