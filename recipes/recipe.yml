@@ -176,7 +176,6 @@ modules:
       install:
         - org.mozilla.firefox
         - org.gnome.Loupe
-        - org.gnome.Loupe
         - com.vscodium.codium
         - org.onlyoffice.desktopeditors
       remove:
