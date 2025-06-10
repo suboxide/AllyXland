@@ -27,6 +27,7 @@ modules:
       - https://copr.fedorainfracloud.org/coprs/wef/wlogout/repo/fedora-%OS_VERSION%/wef-wlogout-fedora-%OS_VERSION%.repo
       - https://copr.fedorainfracloud.org/coprs/yalter/niri-git/repo/fedora-%OS_VERSION%/yalter-niri-git-fedora-%OS_VERSION%.repo
       - https://copr.fedorainfracloud.org/coprs/swayfx/swayfx/repo/fedora-%OS_VERSION%/swayfx-swayfx-fedora-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/medzik/vscode/repo/fedora-%OS_VERSION%/swayfx-swayfx-fedora-%OS_VERSION%.repo
       - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
     install:
       - micro
@@ -39,7 +40,7 @@ modules:
       - breeze-gtk
       - brightnessctl
       - cliphist
-      - code
+      - code-oss
       - dolphin
       - dwarfs
       - fcitx5
@@ -49,7 +50,6 @@ modules:
       - fcitx5-libs
       - fish
       - fontconfig
-      - glaze
       - gnome-control-center
       - gnome-screenshot
       - gnome-settings-daemon
@@ -66,10 +66,8 @@ modules:
       - hyprland
       - hyprland-contrib
       - hyprland-plugins
-      - hyprland-protocols
       - hyprland-qt-support
       - hyprland-qtutils
-      - hyprland-welcome
       - hyprlang
       - hyprlock
       - hyprnome
@@ -134,7 +132,6 @@ modules:
       - sddm-breeze
       - sddm-kcm
       - sddm-themes
-      - simde
       - starship
       - swappy
       - swayfx
@@ -163,6 +160,7 @@ modules:
       - xdg-desktop-portal-hyprland
       - zsh
       - https://boosteroid.com/linux/installer/boosteroid-install-x64.rpm
+      - https://github.com/ONLYOFFICE/DesktopEditors/releases/latest/download/onlyoffice-desktopeditors.x86_64.rpm
     remove:
       # example: removing firefox (in favor of the flatpak)
       # "firefox" is the main package, "firefox-langpacks" is a dependency
@@ -177,7 +175,6 @@ modules:
         - org.mozilla.firefox
         - org.gnome.Loupe
         - com.vscodium.codium
-        - org.onlyoffice.desktopeditors
       remove:
         - org.gnome.eog
     user: {} # Also add Flathub user repo, but no user packages
