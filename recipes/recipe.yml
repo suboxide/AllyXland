@@ -160,7 +160,6 @@ modules:
       - https://boosteroid.com/linux/installer/boosteroid-install-x64.rpm
       - https://github.com/ONLYOFFICE/DesktopEditors/releases/latest/download/onlyoffice-desktopeditors.x86_64.rpm
     remove:
-      # - firefox
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
