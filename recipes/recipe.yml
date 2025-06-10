@@ -26,7 +26,6 @@ modules:
       - https://copr.fedorainfracloud.org/coprs/tofik/nwg-shell/repo/fedora-%OS_VERSION%/tofik-nwg-shell-fedora-%OS_VERSION%.repo
       - https://copr.fedorainfracloud.org/coprs/wef/wlogout/repo/fedora-%OS_VERSION%/wef-wlogout-fedora-%OS_VERSION%.repo
       - https://copr.fedorainfracloud.org/coprs/yalter/niri-git/repo/fedora-%OS_VERSION%/yalter-niri-git-fedora-%OS_VERSION%.repo
-      - https://copr.fedorainfracloud.org/coprs/swayfx/swayfx/repo/fedora-%OS_VERSION%/swayfx-swayfx-fedora-%OS_VERSION%.repo
       - https://copr.fedorainfracloud.org/coprs/medzik/vscode/repo/fedora-%OS_VERSION%/swayfx-swayfx-fedora-%OS_VERSION%.repo
       - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
     install:
@@ -127,14 +126,12 @@ modules:
       - ranger
       - rofi-wayland
       - satty
-      - scenefx
       - sddm
       - sddm-breeze
       - sddm-kcm
       - sddm-themes
       - starship
       - swappy
-      - swayfx
       - swaylock-effects
       - swww
       - tailscale
@@ -174,7 +171,12 @@ modules:
       install:
         - org.mozilla.firefox
         - org.gnome.Loupe
-        - com.vscodium.codium
+        - com.parsecgaming.parsec
+        - com.google.Chrome
+        - app.zen_browser.zen
+        - org.vinegarhq.Sober
+        - io.mrarm.mcpelauncher
+        - org.prismlauncher.PrismLauncher
       remove:
         - org.gnome.eog
     user: {} # Also add Flathub user repo, but no user packages
