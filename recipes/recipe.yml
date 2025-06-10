@@ -3,7 +3,7 @@
 name: allyxland  # Fixed: lowercase as per warning
 description: Bazzite gnome deck with SDDM switching.
 
-base-image: ghcr.io/ublue-os/bazzite-deck-gnome
+base-image: ghcr.io/ublue-os/bazzite-deck
 image-version: 42
 
 modules:
@@ -25,16 +25,31 @@ modules:
       - https://copr.fedorainfracloud.org/coprs/medzik/vscode/repo/fedora-%OS_VERSION%/medzik-vscode-fedora-%OS_VERSION%.repo
       # Only add repos for packages you actually need that aren't in Bazzite
     install:
+      - alsa-lib
+      - alsa-plugins-pulseaudio
       - aquamarine
       - ark
+      - bluez
       - breeze-gtk
       - brightnessctl
       - cliphist
       - code-oss
       - dolphin
       - dwarfs
+      - fcitx5
+      - fcitx5-autostart
+      - fcitx5-data
+      - fcitx5-devel
+      - fcitx5-libs
       - fish
       - fontconfig
+      - gnome-control-center
+      - gnome-screenshot
+      - gnome-settings-daemon
+      - gnome-shell
+      - gnome-software
+      - gnome-system-monitor
+      - gnome-terminal
       - gwenview
       - hellwal
       - hyprcursor
@@ -67,7 +82,11 @@ modules:
       - libva
       - libvdpau
       - libxcb
+      - lxappearance
+      - matugen
       - micro
+      - miracle-wm
+      - mpvpaper
       - nautilus
       - niri
       - nodejs
@@ -83,11 +102,16 @@ modules:
       - nwg-shell
       - nwg-shell-config
       - nwg-shell-wallpapers
+      - ocl-icd
+      - okular
+      - openssh
+      - openssh-server
       - plasma-breeze
       - plasma-desktop
       - plasma-nm
       - plasma-pa
       - plasma-systemsettings
+      - plasma-workspace
       - pyprland
       - qt5-qtvirtualkeyboard
       - qt5-qtvirtualkeyboard-examples
