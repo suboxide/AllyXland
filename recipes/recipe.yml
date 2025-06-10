@@ -25,12 +25,88 @@ modules:
       - https://copr.fedorainfracloud.org/coprs/medzik/vscode/repo/fedora-%OS_VERSION%/swayfx-swayfx-fedora-%OS_VERSION%.repo
       # Only add repos for packages you actually need that aren't in Bazzite
     install:
-      # Only install what's NOT already in Bazzite
+      - brightnessctl
+      - cliphist
+      - code-oss
+      - dwarfs
+      - fish
+      - fontconfig
+      - hellwal
+      - hyprcursor
+      - hyprdim
+      - hyprgraphics
+      - hypridle
+      - hyprland
+      - hyprland-contrib
+      - hyprland-plugins
+      - hyprland-qt-support
+      - hyprland-qtutils
+      - hyprlang
+      - hyprlock
+      - hyprnome
+      - hyprpaper
+      - hyprpicker
+      - hyprpolkitagent
+      - hyprshot
+      - hyprsysteminfo
+      - hyprutils
+      - kitty
+      - libva
+      - libvdpau
+      - libxcb
+      - lxappearance
+      - micro
+      - niri
+      - nodejs
+      - nwg-bar
+      - nwg-clipman
+      - nwg-displays
+      - nwg-dock
+      - nwg-drawer
+      - nwg-icon-picker
+      - nwg-look
+      - nwg-menu
+      - nwg-panel
+      - nwg-shell
+      - nwg-shell-config
+      - nwg-shell-wallpapers
+      - ocl-icd
+      - pyprland
+      - rofi-wayland
+      - satty
       - sddm
       - sddm-breeze
       - sddm-kcm
+      - sddm-themes
+      - starship
+      - swappy
+      - swaylock-effects
+      - swww
       - tailscale
-      # Add others one by one after testing
+      - Thunar
+      - thunar-archive-plugin
+      - thunar-media-tags-plugin
+      - thunar-vcs-plugin
+      - thunar-volman
+      - tomlplusplus
+      - traceroute
+      - unclutter-xfixes
+      - uwsm
+      - waybar-git
+      - waypaper
+      - wayvnc
+      - wl-clipboard
+      - wlogout
+      - xcb-util-image
+      - xcb-util-keysyms
+      - xcb-util-renderutil
+      - xcb-util-wm
+      - xcur2png
+      - xdg-desktop-portal-hyprland
+      - zsh
+      - https://repo.almalinux.org/almalinux/9/AppStream/x86_64/os/Packages/compat-openssl11-1.1.1k-4.el9_0.x86_64.rpm
+      - https://boosteroid.com/linux/installer/boosteroid-install-x64.rpm
+      - https://github.com/ONLYOFFICE/DesktopEditors/releases/latest/download/onlyoffice-desktopeditors.x86_64.rpm
 
   - type: default-flatpaks
     notify: true
