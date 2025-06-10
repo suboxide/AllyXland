@@ -160,10 +160,7 @@ modules:
       - https://boosteroid.com/linux/installer/boosteroid-install-x64.rpm
       - https://github.com/ONLYOFFICE/DesktopEditors/releases/latest/download/onlyoffice-desktopeditors.x86_64.rpm
     remove:
-      # example: removing firefox (in favor of the flatpak)
-      # "firefox" is the main package, "firefox-langpacks" is a dependency
-      - firefox
-      - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+      # - firefox
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
