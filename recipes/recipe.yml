@@ -156,6 +156,7 @@ modules:
       - xcur2png
       - xdg-desktop-portal-hyprland
       - zsh
+      - https://repo.almalinux.org/almalinux/9/AppStream/x86_64/os/Packages/compat-openssl11-1.1.1k-4.el9_0.x86_64.rpm
       - https://boosteroid.com/linux/installer/boosteroid-install-x64.rpm
       - https://github.com/ONLYOFFICE/DesktopEditors/releases/latest/download/onlyoffice-desktopeditors.x86_64.rpm
     remove:
