@@ -174,21 +174,21 @@ modules:
       enabled:
         - tailscaled
       disabled:
-        # -
+        []
     user: {}
 
   - type: fonts
     fonts:
-     nerd-fonts:
-      - FiraCode
-      - Hack
-      - SourceCodePro
-      - Terminus
-      - JetBrainsMono
-      - NerdFontsSymbolsOnly
-     google-fonts:
-      - Roboto
-      - Open Sans
+      nerd-fonts:
+        - FiraCode
+        - Hack
+        - SourceCodePro
+        - Terminus
+        - JetBrainsMono
+        - NerdFontsSymbolsOnly
+      google-fonts:
+        - Roboto
+        - Open Sans
 
   - type: signing
 
